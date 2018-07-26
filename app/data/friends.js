@@ -1,7 +1,7 @@
 var friendsArray = [
 	{
 "name": "Magneto",
-"photo": "https://cdn4.list25.com/wp-content/uploads/2017/09/magento-610x938.jpg",
+"photo": "https://imgix.ranker.com/user_node_img/75/1499342/original/magneto-comic-book-characters-photo-u13?w=650&q=50&fm=jpg&fit=crop&crop=faces",
 "scores": [
 "5",
 "1",

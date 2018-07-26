@@ -44,19 +44,7 @@
 </head>
 
 <body>
-	<!--   <header>
-    <nav>
-      <div class="nav-wrapper pink accent-2">
-        <i class="fa fa-address-book-o fa-5x" aria-hidden="true" id=logo-icon></i>
-        <a href="/" class="brand-logo" id="logo">Friend Finder</a>
-        <ul class="right hide-on-med-and-down" id="head-nav-links">
-          <li><a href="/survey">Survey</a></li>
-          <li><a href="/api/friends">API Friends List</a></li>
-          <li><a href="https://github.com/angrbrd/friend-finder">GitHub Repo</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header> -->
+
 
 <main>
   <div class="container">
@@ -208,7 +196,7 @@
 
     <!-- Submit Button -->
     <div>
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitButton" data-toggle="modal" data-target="#results-modal"><i class="fa fa-check-circle" aria-hidden="true"></i>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitButton" data-target="#results-modal"><i class="fa fa-check-circle" aria-hidden="true"></i>
      Submit Questions</button>
    </div>
     <hr>
@@ -287,13 +275,17 @@
         var ans10 = $('#q10 :selected').val();
 
         if (nameAns === "" || imgAns === "" || ans1 === "" || ans2 === "" || ans3 === "" || ans4 === "" ||
-            ans5 === "" || ans6 === "" || ans7 === "" || ans8 === "" || ans9 === "" || ans10 === "") {
+            ans5 === "" || ans6 === "" || ans7 === "" || ans8 === "" || ans9 === "" || ans10 === "") 
+        {
             BootstrapDialog.show({
             title: 'ALERT!!',
             message: 'Please fill in all fields'
         });
+            return;
 
         }
+        else {
+
 
       // Create an object for the user"s data
         var userData = {
@@ -326,12 +318,13 @@
           // $("#match-img").attr("src", data.matchImg);
 
           // Show the modal with the best match
-          $("#results-modal").modal("open");
+          $("#results-modal").modal("show");
 
         });
       // } else {
       //   alert("Please fill out all fields before submitting!");
       // }
+        }
     });
   </script>
 </body>
